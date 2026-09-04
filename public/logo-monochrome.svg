@@ -1,0 +1,49 @@
+<svg viewBox="0 0 600 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Naz AI monochrome logo">
+  <defs>
+    <linearGradient id="silverWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="42%" stop-color="#eeeeee"/>
+      <stop offset="65%" stop-color="#9b9b9b"/>
+      <stop offset="82%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f7f7"/>
+      <stop offset="48%" stop-color="#bdbdbd"/>
+      <stop offset="100%" stop-color="#4a4a4a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <path d="M150 450 C195 430 205 375 204 318 C202 244 190 176 229 119 C258 77 314 73 352 106 C386 136 397 180 420 223 C448 275 474 329 502 352 L502 90 C502 68 520 50 542 50 L542 388 C542 430 515 460 478 460 C433 460 401 414 374 361 L285 184 C270 154 249 143 231 157 C212 172 215 206 222 246 C235 323 234 399 197 445 C184 461 166 470 145 470 Z" fill="url(#silverWhite)" stroke="#111" stroke-width="6" stroke-linejoin="round" filter="url(#shadow)"/>
+  <path d="M365 177 C389 214 410 263 435 309 C451 339 468 358 490 367 L490 104 C477 115 461 124 445 126 C420 129 402 111 383 91 C365 72 343 69 327 82 C351 99 355 126 365 177 Z" fill="#080808" opacity=".94"/>
+  <path d="M154 155 C125 165 103 188 101 218 C99 236 106 248 116 258 L107 276 L120 286 L116 301 L129 311 L124 329 C130 346 143 357 161 361 C174 365 184 373 189 389 L206 430 C222 399 224 356 216 304 C209 258 204 218 216 188 C203 166 180 151 154 155 Z" fill="url(#face)" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M116 258 C129 257 138 260 143 267 C137 275 132 280 121 282 M123 329 C136 335 149 334 160 329" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+  <g fill="none" stroke="#e7e7e7" stroke-width="5" stroke-linecap="round">
+    <path d="M374 242 H415 L435 224 H470"/>
+    <path d="M382 269 H424 L442 251 H490"/>
+    <path d="M394 296 H430 L450 280 H476"/>
+    <path d="M405 323 H439 L457 309 H500"/>
+    <path d="M416 350 H447 L464 338 H486"/>
+  </g>
+  <g fill="#fff" stroke="#111" stroke-width="4">
+    <circle cx="470" cy="224" r="10"/>
+    <circle cx="490" cy="251" r="12"/>
+    <circle cx="476" cy="280" r="9"/>
+    <circle cx="500" cy="309" r="13"/>
+    <circle cx="486" cy="338" r="9"/>
+  </g>
+  <g fill="#111">
+    <rect x="65" y="286" width="12" height="12" rx="2"/>
+    <rect x="83" y="307" width="18" height="18" rx="2"/>
+    <rect x="52" y="329" width="9" height="9" rx="2"/>
+    <rect x="72" y="350" width="14" height="14" rx="2"/>
+    <rect x="93" y="373" width="8" height="8" rx="2"/>
+  </g>
+  <g fill="#aaa">
+    <rect x="46" y="306" width="7" height="7"/>
+    <rect x="62" y="373" width="6" height="6"/>
+    <rect x="101" y="291" width="6" height="6"/>
+  </g>
+</svg>

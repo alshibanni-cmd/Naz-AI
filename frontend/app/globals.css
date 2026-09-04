@@ -1,0 +1,540 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  direction: rtl;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+p, span, div, input, button, textarea, label, .font-sans {
+  font-family: var(--font-sans);
+}
+
+h1 { font-size: 32px; font-weight: 700; line-height: 1.2; }
+h2 { font-size: 24px; font-weight: 600; line-height: 1.3; }
+h3 { font-size: 20px; font-weight: 600; line-height: 1.4; }
+body, p { font-size: 16px; line-height: 1.6; }
+small, .text-small { font-size: 14px; line-height: 1.5; color: #64748b; }
+.text-xs { font-size: 12px; line-height: 1.4; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-8px); opacity: 1; }
+}
+.animate-bounce {
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+p, h1, h2, h3, h4, span, div, input, button {
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+}
+
+/* الخط العربي */
+.font-arabic {
+  font-family: 'Tajawal', 'Segoe UI', sans-serif;
+}
+
+/* تحسين القراءة */
+body, button, input, select, textarea, div, span, p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Tajawal', 'Segoe UI', sans-serif;
+}
+/* ============================================================
+   إعدادات متغيرة للتطبيق
+   ============================================================ */
+:root {
+  --accent-color: #3b82f6;
+  --spacing-unit: 1rem;
+  --gap-unit: 0.5rem;
+}
+
+/* كثافات الواجهة */
+.density-compact {
+  --spacing-unit: 0.5rem;
+  --gap-unit: 0.25rem;
+}
+.density-comfortable {
+  --spacing-unit: 1rem;
+  --gap-unit: 0.5rem;
+}
+.density-spacious {
+  --spacing-unit: 1.5rem;
+  --gap-unit: 1rem;
+}
+
+/* تقليل الحركة */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* المظهر الداكن */
+.dark {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+.dark .bg-white {
+  background-color: #16213e;
+}
+.dark .border-gray-200 {
+  border-color: #2a3a5e;
+}
+.dark .text-gray-800 {
+  color: #e0e0e0;
+}
+.dark .text-gray-600 {
+  color: #b0b0b0;
+}
+.dark .bg-gray-50 {
+  background-color: #1a1a2e;
+}
+.dark .bg-gray-100 {
+  background-color: #2a3a5e;
+}
+.dark .bg-gray-200 {
+  background-color: #3a4a6e;
+}
+
+/* ============================================================
+   🎨 تنسيقات الوضع الداكن لعناصر الإعدادات
+   ============================================================ */
+
+/* العناصر في الوضع الداكن - خلفية بيضاء ونص داكن */
+.dark select,
+.dark input,
+.dark textarea,
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .border-gray-200 {
+  background-color: #ffffff !important;
+  color: #1a1a2e !important;
+  border-color: #d1d5db !important;
+}
+
+/* خلفية العناصر التفاعلية */
+.dark select:focus,
+.dark input:focus,
+.dark textarea:focus {
+  background-color: #ffffff !important;
+  color: #1a1a2e !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* أزرار التبديل (Toggle) في الوضع الداكن */
+.dark .bg-gray-300 {
+  background-color: #4b5563 !important;
+}
+
+.dark .bg-blue-600 {
+  background-color: #3b82f6 !important;
+}
+
+/* النصوص في الوضع الداكن */
+.dark .text-gray-800 {
+  color: #1a1a2e !important;
+}
+
+.dark .text-gray-900 {
+  color: #1a1a2e !important;
+}
+
+.dark .text-gray-700 {
+  color: #1a1a2e !important;
+}
+
+.dark .text-gray-600 {
+  color: #374151 !important;
+}
+
+.dark .text-gray-500 {
+  color: #4b5563 !important;
+}
+
+.dark .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+/* خلفية نافذة الإعدادات في الوضع الداكن */
+.dark .bg-white {
+  background-color: #ffffff !important;
+}
+
+/* الشريط الجانبي في الوضع الداكن */
+.dark .bg-gray-50\/30 {
+  background-color: #f3f4f6 !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #e5e7eb !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #d1d5db !important;
+}
+
+.dark .border-l {
+  border-left-color: #e5e7eb !important;
+}
+
+.dark .border-b {
+  border-bottom-color: #e5e7eb !important;
+}
+
+.dark .border-t {
+  border-top-color: #e5e7eb !important;
+}
+
+/* زر نشط في الشريط الجانبي */
+.dark .bg-blue-100 {
+  background-color: #dbeafe !important;
+}
+
+.dark .text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+/* خلفية الحقول في الوضع الداكن */
+.dark .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+/* عناصر التحكم في الوضع الداكن */
+.dark select option {
+  background-color: #ffffff !important;
+  color: #1a1a2e !important;
+}
+
+/* زر "تطبيق" في الوضع الداكن */
+.dark .bg-blue-600 {
+  background-color: #2563eb !important;
+}
+
+.dark .bg-blue-600:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* زر "تطبيق" معطل */
+.dark .bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* علامات ✓ و ⚠️ */
+.dark .text-green-600 {
+  color: #16a34a !important;
+}
+
+.dark .text-amber-500 {
+  color: #d97706 !important;
+}
+
+/* نص التعليمات في textarea */
+.dark .placeholder-gray-400::placeholder {
+  color: #9ca3af !important;
+}
+
+/* ============================================================
+   🎨 تنسيقات الوضع الداكن لعناصر الإعدادات (نسخة مصححة)
+   ============================================================ */
+
+/* عناصر الإعدادات في الوضع الداكن */
+.dark select,
+.dark input,
+.dark textarea {
+  background-color: #ffffff !important;
+  color: #1a1a2e !important;
+  border-color: #d1d5db !important;
+}
+
+.dark select:focus,
+.dark input:focus,
+.dark textarea:focus {
+  background-color: #ffffff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+.dark select option {
+  background-color: #ffffff !important;
+  color: #1a1a2e !important;
+}
+
+/* أزرار التبديل */
+.dark .bg-gray-300 {
+  background-color: #4b5563 !important;
+}
+
+.dark .bg-blue-600 {
+  background-color: #3b82f6 !important;
+}
+
+/* نصوص الإعدادات */
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark .text-gray-700 {
+  color: #1a1a2e !important;
+}
+
+.dark .text-gray-500,
+.dark .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+/* خلفية النافذة */
+.dark .bg-white {
+  background-color: #ffffff !important;
+}
+
+.dark .bg-gray-50\/30 {
+  background-color: #f3f4f6 !important;
+}
+
+.dark .border-gray-100,
+.dark .border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.dark .bg-blue-100 {
+  background-color: #dbeafe !important;
+}
+
+.dark .text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.dark .bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.dark .text-green-600 {
+  color: #16a34a !important;
+}
+
+.dark .text-amber-500 {
+  color: #d97706 !important;
+}
+
+/* ============================================================
+   🎨 تنسيقات الصفحة الرئيسية في الوضع الداكن
+   ============================================================ */
+
+/* خلفية الصفحة الرئيسية */
+.dark .bg-gray-50 {
+  background-color: #1a1a2e !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #16213e !important;
+}
+
+.dark .bg-white {
+  background-color: #16213e !important;
+}
+
+/* خلفية البطاقات والعناصر */
+.dark .bg-white\/80 {
+  background-color: rgba(22, 33, 62, 0.8) !important;
+}
+
+/* الحدود */
+.dark .border-gray-200 {
+  border-color: #2a3a5e !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #1e2d4a !important;
+}
+
+.dark .border-l {
+  border-left-color: #2a3a5e !important;
+}
+
+.dark .border-b {
+  border-bottom-color: #2a3a5e !important;
+}
+
+.dark .border-t {
+  border-top-color: #2a3a5e !important;
+}
+
+.dark .border-r {
+  border-right-color: #2a3a5e !important;
+}
+
+/* النصوص */
+.dark .text-gray-800 {
+  color: #e0e0e0 !important;
+}
+
+.dark .text-gray-900 {
+  color: #f0f0f0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #d0d0d0 !important;
+}
+
+.dark .text-gray-600 {
+  color: #b0b0b0 !important;
+}
+
+.dark .text-gray-500 {
+  color: #909090 !important;
+}
+
+.dark .text-gray-400 {
+  color: #707070 !important;
+}
+
+/* حقل الإدخال في الصفحة الرئيسية */
+.dark .bg-gray-50 {
+  background-color: #1a1a2e !important;
+}
+
+.dark .bg-gray-50:focus {
+  background-color: #1a1a2e !important;
+}
+
+/* عناوين الصفحة الرئيسية */
+.dark h1,
+.dark .font-serif {
+  color: #f0f0f0 !important;
+}
+
+/* أزرار المهام السريعة */
+.dark .bg-white {
+  background-color: #16213e !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #2a3a5e !important;
+}
+
+.dark .hover\:border-blue-300:hover {
+  border-color: #3b82f6 !important;
+}
+
+.dark .text-blue-600 {
+  color: #60a5fa !important;
+}
+
+.dark .group-hover\:text-blue-600:hover {
+  color: #60a5fa !important;
+}
+
+/* شريط العنوان */
+.dark .bg-white\/80 {
+  background-color: rgba(22, 33, 62, 0.8) !important;
+}
+
+/* المنطقة الزمنية والتاريخ */
+.dark .text-xs {
+  color: #9ca3af !important;
+}
+
+/* الزر في الصفحة الرئيسية */
+.dark .bg-blue-600 {
+  background-color: #2563eb !important;
+}
+
+.dark .bg-blue-600:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* التبويبات النشطة */
+.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.dark .text-blue-700 {
+  color: #60a5fa !important;
+}
+
+.dark .border-blue-200 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* حالة الاتصال في الهيدر */
+.dark .bg-gray-100 {
+  background-color: #2a3a5e !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #2a3a5e !important;
+}
+
+.dark .bg-gray-400 {
+  background-color: #4a5a7e !important;
+}
+
+/* ============================================================
+   🎨 إصلاح الشريط الجانبي في الوضع الداكن
+   ============================================================ */
+
+.dark .bg-gray-50\/30 {
+  background-color: #1a1a2e !important;
+}
+
+.dark .bg-white {
+  background-color: #16213e !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #2a3a5e !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #2a3a5e !important;
+}
+
+.dark .text-gray-900 {
+  color: #e0e0e0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #b0b0b0 !important;
+}

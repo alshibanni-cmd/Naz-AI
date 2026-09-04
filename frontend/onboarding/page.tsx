@@ -1,0 +1,66 @@
+﻿"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Zap, Scale, Brain, Check, ArrowRight } from "lucide-react";
+
+const presets = [
+  ["fast", "Fast & Simple", "Quick daily use."],
+  ["balanced", "Balanced", "Recommended everyday mode."],
+  ["deep", "Deep & Autonomous", "Complex work with more independent execution."]
+] as const;
+
+export default function OnboardingPage() {
+  const [selected, setSelected] = useState<(typeof presets)[number][0] | null>(null);
+  const router = useRouter();
+
+  const continueSetup = () => {
+    if (!selected) return;
+    localStorage.setItem("naz_onboarding_completed", "true");
+    router.push("/");
+  };
+
+  const icons = { fast: Zap, balanced: Scale, deep: Brain } as const;
+
+  return (
+    <div className="min-h-screen bg-slate-950 px-5 py-16 text-white">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center">
+          <div className="text-xs font-semibold uppercase tracking-[.18em] text-blue-400">Naz AI</div>
+          <h1 className="mt-4 text-4xl font-semibold">How do you want Naz to work?</h1>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-400">Choose a starting operating profile. Every setting remains editable later.</p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {presets.map(([id, title, desc]) => {
+            const Icon = icons[id as keyof typeof icons];
+            const active = selected === id;
+            return (
+              <button key={id}
+                onClick={() => setSelected(id)}
+                className={`relative rounded-2xl border p-6 text-left ${active ? "border-blue-400 bg-blue-500/10" : "border-white/10 bg-white/[.03]"}`}
+              >
+                {active && (
+                  <div className="absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-blue-500">
+                    <Check size={14} />
+                  </div>
+                )}
+                <Icon size={22} />
+                <h2 className="mt-5 text-lg font-semibold">{title}</h2>
+                <p className="mt-2 text-xs leading-5 text-slate-400">{desc}</p>
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-8 text-center">
+          <button
+            disabled={!selected}
+            onClick={continueSetup}
+            className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold disabled:opacity-30"
+          >
+            Continue <ArrowRight size={16} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
